@@ -16,4 +16,16 @@
   </div>
 </div>
 
-<app-game-control></app-game-control>
+<app-game-control
+  (gameStart)="onGameStart($event)"
+></app-game-control>
+<div class="row">
+  <app-odd
+    *ngFor="let oddElement of oddElements"
+    [oddElement] = "oddElement">
+  </app-odd>
+  <app-even
+    *ngFor="let evenElement of evenElements"
+    [evenElement] = "evenElement">
+  </app-even>
+</div>
